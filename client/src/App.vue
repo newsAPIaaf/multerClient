@@ -20,8 +20,6 @@ export default {
   methods: {
     checkLogin (logged) {
       if (localStorage.getItem('authLogin')) {
-        console.log('ini localstorage', localStorage.getItem('authLogin'))
-        console.log('ini login', logged)
         this.login = logged
       } else {
         this.login = false

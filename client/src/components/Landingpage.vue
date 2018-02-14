@@ -2,7 +2,7 @@
   <div class="container-fluid flx">
     <div class="bg-reg col-lg-5 col-lg-offset-6">
     <span>
-      <img src="http://annualreport2015.ciat.cgiar.org/wp-content/uploads/2016/03/icon-food.png" alt="E-lukis">
+      <img src="http://www.eatlogos.com/food_and_drinks/png/food_eat_logo.png" alt="E-lukis">
     </span>
     <form>
       <fieldset>
@@ -19,7 +19,7 @@
           </div>
           <!-- button sign up -->
           <div class="col-sm-12">
-            <button @click="signin(formData)" type="button" class="mg btn btn-success btn-block spc">SIGN IN</button>
+            <button @click="signin(formData)" type="button" class="mg btn btn-info btn-block spc">SIGN IN</button>
           </div>
         </div>
       </fieldset>
@@ -40,19 +40,17 @@ export default {
     }
   },
   methods: {
-    signin () {
-      axios.post('http://localhost:3000/api/users/signin', {
-        email: this.email,
-        password: this.password
+    signin (user) {
+      axios.post('http://localhost:3000/users/signin', {
+        email: user.email,
+        password: user.password
       })
         .then(response => {
-          console.log('dah login', response.data)
           localStorage.setItem('authLogin', response.data.token)
-          // localStorage.setItem('userId', response.data.userId)
-          this.email = ''
-          this.password = ''
+          this.formData.email = ''
+          this.formData.password = ''
           this.$emit('navigasi-login', true)
-          // this.$router.push({name: 'Home'})
+          this.$router.push({name: 'Home'})
         })
         .catch(err => {
           console.log(err)
@@ -85,10 +83,8 @@ input {
 }
 
 img {
-  width: 35%;
+  width: 50%;
   height: 50%;
-  padding: 0%;
-  margin: 0%
 }
 
 label {
@@ -110,6 +106,6 @@ label {
 }
 
 .mg {
-  margin-bottom: 5%;
+  margin-top: 2%;
 }
 </style>

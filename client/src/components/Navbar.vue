@@ -31,12 +31,26 @@
 <script>
 export default {
   props: ['isLogin'],
+  data () {
+    return {
+      isAuth: false
+    }
+  },
   methods: {
     logout () {
       localStorage.clear()
       this.$emit('navigasi-login', false)
       this.$router.push({ name: 'Landingpage' })
+      this.isAuth = false
+    },
+    checkAuth () {
+      if (localStorage.getItem('authLogin')) {
+        this.isAuth = true
+      }
     }
+  },
+  created () {
+    this.checkAuth()
   }
 }
 </script>

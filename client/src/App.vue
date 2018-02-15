@@ -14,7 +14,8 @@ export default {
   },
   data () {
     return {
-      login: false
+      login: false,
+      isAuth: false
     }
   },
   methods: {

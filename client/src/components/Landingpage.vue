@@ -2,7 +2,7 @@
   <div class="container-fluid flx">
     <div class="bg-reg col-lg-5 col-lg-offset-6">
     <span>
-      <img src="http://www.eatlogos.com/food_and_drinks/png/food_eat_logo.png" alt="E-lukis">
+      <img src="../assets/menu.png" alt=" ">
     </span>
     <form>
       <fieldset>
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .flx {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: flex-end;
 }
@@ -83,8 +83,8 @@ input {
 }
 
 img {
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 65%;
 }
 
 label {

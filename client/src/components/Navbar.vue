@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <router-link :to="{name: 'Landingpage'}" class="navbar-brand" style="letter-spacing: 5px;"> REST-O </router-link>
+      <router-link :to="{name: 'Landingpage'}" class="navbar-brand"> Menu - Menu IN </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

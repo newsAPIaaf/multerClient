@@ -58,7 +58,15 @@ export default {
       data.append('image', this.fileUpload[0])
       axios.post('http://localhost:3000/images', data)
       .then(response => {
-        console.log(response.data)
+        console.log(response.data.foodName, 'hoi');
+        axios.get(`http://localhost:3000/walmart/search?q=${response.data.foodName}`)
+        .then(result => {
+          console.log(response.data)
+          console.log(result.data)
+        })
+        .catch(err => {
+          console.error(err)
+        })
       })
       .catch(err => {
         console.log(err)

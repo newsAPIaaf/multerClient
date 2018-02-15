@@ -30,6 +30,7 @@
 
 <script>
 import axios from 'axios'
+import swal from 'sweetalert'
 export default {
   data () {
     return {
@@ -50,9 +51,21 @@ export default {
           this.formData.email = ''
           this.formData.password = ''
           this.$emit('navigasi-login', true)
+          swal({
+            title: 'Login success',
+            text: 'Enjoy!',
+            icon: 'success',
+            button: 'Continue'
+          })
           this.$router.push({name: 'Home'})
         })
         .catch(err => {
+          swal({
+            title: 'Oops!',
+            text: 'Please re-enter a valid email or password',
+            icon: 'error',
+            button: 'Continue'
+          })
           console.log(err)
         })
     }

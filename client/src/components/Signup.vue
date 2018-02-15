@@ -2,11 +2,12 @@
   <div class="container-fluid flx">
     <div class="bg-reg col-lg-5 col-lg-offset-6">
     <span>
-      <img src="http://www.eatlogos.com/food_and_drinks/png/food_eat_logo.png" alt="E-lukis">
+      <img src="../assets/menu.png" alt=" ">
     </span>
     <form>
       <fieldset>
         <div class="form-group row" style="margin: auto;" >
+          <!-- username -->
            <label for="staticUsername" class="col-sm-3 col-form-label">Username</label>
           <div class="col-sm-9 lft">
             <input v-model="formData.username" class="form-control" id="staticUsername" placeholder="Type Your Username" type="text">
@@ -74,7 +75,7 @@ export default {
 
 <style scoped>
 .flx {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: flex-end;
 }
@@ -95,8 +96,8 @@ input {
 }
 
 img {
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 63%;
 }
 
 label {
